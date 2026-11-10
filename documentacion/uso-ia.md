@@ -34,3 +34,43 @@ Estructura de carpetas comprobada mediante capturas.
 ### Decisión
 Conservar V1 como respaldo y trabajar
 V2 mediante 9 etapas documentadas.
+
+
+
+## Etapa 2 - Estructura HTML semántica
+
+Fecha: 10/11/2026
+
+### Consulta realizada
+HENRY PI1 – ColorLab V2. Iniciamos la Etapa 2:
+HTML semántico.
+
+Se solicitó construir la estructura de la aplicación
+siguiendo la rúbrica, incorporando selectores 6/8/9,
+formatos HSL/HEX, botón generador y contenedor
+de tarjetas dinámicas.
+
+### Aporte de IA
+Propuesta de estructura HTML semántica,
+identificadores para JavaScript y conexiones
+con los archivos CSS y JS.
+
+### Trabajo realizado
+- Escritura manual del código HTML en VS Code.
+- Organización de encabezado, controles y resultados.
+- Vinculación de los archivos CSS y JavaScript.
+
+### Validación
+- Estructura HTML visualizada mediante Live Server.
+- Página cargada correctamente en localhost:5500.
+- Encabezado, selectores, botón y contenedor visibles.
+- Opciones 6/8/9 y HSL/HEX comprobadas.
+- CSS y generación dinámica pendientes de implementación.
+
+### Resultado
+Estructura HTML semántica implementada y validada
+visualmente. Preparada para integrar CSS y JavaScript.
+
+### Decisión técnica
+Separar HTML, CSS y JavaScript para facilitar
+el mantenimiento y la evolución del proyecto.
