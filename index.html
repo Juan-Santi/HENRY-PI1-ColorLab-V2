@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorLab V2 | Generador de Paletas</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    
+     <header class="encabezado">
+        <h1>ColorLab V2</h1>
+        <p>Generador de paletas de colores</p>
+    </header>
+
+    <main>
+
+        <section class="configuracion" aria-labelledby="titulo-configuracion">
+
+            <h2 id="titulo-configuracion">Configura tu paleta</h2>
+
+            <div class="controles">
+
+                <div class="grupo-control">
+                    <label for="selector-cantidad">Cantidad de colores:</label>
+
+                    <select id="selector-cantidad">
+                        <option value="6">6 colores</option>
+                        <option value="8">8 colores</option>
+                        <option value="9">9 colores</option>
+                    </select>
+                </div>
+
+                <div class="grupo-control">
+                    <label for="selector-formato">Formato de color:</label>
+
+                    <select id="selector-formato">
+                        <option value="hsl">HSL</option>
+                        <option value="hex">HEX</option>
+                    </select>
+                </div>
+
+                <button id="btn-generar" type="button">
+                    Generar paleta
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="resultado" aria-labelledby="titulo-paleta">
+
+            <h2 id="titulo-paleta">Tu paleta de colores</h2>
+
+            <div id="contenedor-paleta" class="paleta-grid">
+                <p class="mensaje-inicial">
+                    Presiona "Generar paleta" para comenzar.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>ColorLab V2 - Proyecto Integrador M1 - HENRY</p>
+    </footer>
+
+</body>
+</html>
