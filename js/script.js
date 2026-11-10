@@ -145,3 +145,16 @@ function actualizarFormato() {
 
 botonGenerar.addEventListener("click", generarPaleta);
 selectorFormato.addEventListener("change", actualizarFormato);
+
+
+/* ====================================
+   Actualizar paleta al cambiar cantidad
+==================================== */
+
+selectorCantidad.addEventListener("change", () => {
+    const hayTarjetas = contenedorPaleta.querySelector(".tarjeta-color");
+
+    if (hayTarjetas) {
+        generarPaleta();
+    }
+});

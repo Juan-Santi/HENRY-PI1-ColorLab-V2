@@ -246,3 +246,53 @@ Seguiremos estrictamente la rúbrica oficial de HENRY.
 - Utilizar una función de actualización de formato para evitar regenerar la paleta cuando el usuario cambia entre HSL y HEX.
 
 - Reutilizar el código existente y mantener separadas las responsabilidades de HTML, CSS y JavaScript.
+
+
+
+
+## Etapa 6 - Interactividad y validaciones
+Fecha: 10/11/2026
+
+### Prompt enviado a la IA
+HENRY PI1 – ColorLab V2. Iniciamos la Etapa 6: interactividad y validaciones.
+
+Debemos revisar y optimizar las interacciones de nuestra aplicación, manteniendo la generación de 6, 8 y 9 colores en formatos HSL y HEX.
+
+Verificaremos el funcionamiento de los selectores, el botón Generar paleta, la actualización de tarjetas y la conservación de colores al alternar formatos.
+
+Buscaremos mejorar la experiencia de usuario, evitar errores, duplicaciones y código innecesario, conservando las funcionalidades que ya funcionan correctamente.
+
+Trabajaremos eficientemente, realizando únicamente las modificaciones necesarias.
+
+Al finalizar, comprobaremos el funcionamiento en Live Server, documentaremos los aportes de IA, las pruebas y las decisiones técnicas, y realizaremos un commit descriptivo.
+
+Seguiremos estrictamente las seis categorías de la rúbrica oficial de HENRY.
+
+### Aporte de IA
+- Revisión de las interacciones existentes.
+- Propuesta de actualización automática al cambiar la cantidad.
+- Reutilización de la función generarPaleta().
+- Plan de pruebas funcionales para los selectores y el botón.
+
+### Trabajo realizado
+- Incorporación del evento change al selector de cantidad.
+- Integración con las funciones existentes.
+- Revisión de la actualización de tarjetas.
+- Pruebas de interacción mediante Live Server.
+
+### Validación
+- Cambio automático entre 6, 8 y 9 colores: correcto.
+- Distribuciones 3x2, 4x2 y 3x3: correctas.
+- Botón Generar paleta: funcionamiento correcto.
+- Las nuevas paletas reemplazan las anteriores.
+- Alternancia HSL/HEX sin modificar colores: correcta.
+- Consola JavaScript sin errores.
+
+### Resultado
+- Interactividad mejorada y validada.
+- El selector de cantidad actualiza automáticamente
+las tarjetas y el botón permite generar nuevas paletas.
+
+### Decisión técnica
+- Reutilizar la función generarPaleta() mediante
+el evento change, evitando duplicar código.
