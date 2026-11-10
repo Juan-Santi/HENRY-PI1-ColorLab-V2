@@ -182,3 +182,67 @@ Los errores fueron analizados con apoyo de ChatGPT. Las correcciones se escribie
 - Distribuir los tonos HSL alrededor del círculo cromático y aplicar pequeñas variaciones aleatorias de saturación y luminosidad para reducir la similitud entre colores.
 
 - Mantener separados HTML, CSS y JavaScript para facilitar las futuras ampliaciones del proyecto.
+
+
+
+## Etapa 5 - Generación HEX y selección de formatos
+Fecha: 10/11/2026
+
+### Prompt enviado a la IA
+HENRY PI1 – ColorLab V2. Iniciamos la Etapa 5: JavaScript y generación de colores HSL.
+Vamos con la siguiente etapa 5
+
+HENRY PI1 – ColorLab V2. Iniciamos la Etapa 5: generación HEX y selección de formatos.
+
+Implementaremos el formato HEX, permitiendo alternar correctamente entre HSL y HEX mediante el selector existente.
+
+Los códigos HEX deben mostrarse en mayúsculas, con formato #RRGGBB, y corresponder exactamente al color de cada tarjeta.
+
+Mantendremos las distribuciones de 6, 8 y 9 colores, la variedad cromática y las funcionalidades ya comprobadas.
+
+Trabajaremos de manera eficiente, aprovechando el código existente, evitando funciones repetidas y corrigiendo únicamente lo necesario.
+
+Realizaremos pruebas en Live Server y documentaremos el prompt, los aportes de IA, la implementación, las validaciones y las decisiones técnicas antes del commit.
+
+Seguiremos estrictamente la rúbrica oficial de HENRY.
+
+
+### Aporte de IA
+- Propuesta de conversión matemática de colores HSL al formato hexadecimal.
+- Implementación de una función para obtener códigos HEX en mayúsculas.
+- Integración del selector existente para alternar entre HSL y HEX.
+- Recomendación de conservar el color original de cada tarjeta.
+- Actualización de los códigos sin generar una nueva paleta.
+- Reutilización de la lógica JavaScript desarrollada en la etapa anterior.
+
+### Trabajo realizado
+- Incorporación de la función de conversión HSL a HEX.
+- Integración del selector de formatos con JavaScript.
+- Actualización dinámica de los códigos mostrados en las tarjetas.
+- Conservación del funcionamiento de las paletas HSL.
+- Pruebas funcionales mediante Live Server.
+
+- Verificación de las distribuciones de 6, 8 y 9 colores.
+
+### Validación
+- Generación de 6 colores: correcta, distribución 3×2.
+- Generación de 8 colores: correcta, distribución 4×2.
+- Generación de 9 colores: correcta, distribución 3×3.
+- Formato HSL: funcionamiento correcto.
+- Formato HEX: funcionamiento correcto.
+- Códigos HEX mostrados en formato #RRGGBB y en mayúsculas.
+- Alternancia entre formatos HSL y HEX comprobada.
+- Visualización de los colores y sus códigos correspondientes.
+- Funcionamiento confirmado mediante pruebas en Live Server.
+
+### Resultado
+- Generador de paletas implementado con soporte para HSL y HEX.
+- La aplicación permite generar paletas de 6, 8 y 9 colores, mostrando los códigos correspondientes al formato seleccionado.
+- Se mantiene la variedad cromática, el diseño visual y las distribuciones establecidas.
+
+### Decisión técnica
+- Conservar internamente el color HSL original de cada tarjeta y realizar la conversión a HEX únicamente cuando sea necesario.
+
+- Utilizar una función de actualización de formato para evitar regenerar la paleta cuando el usuario cambia entre HSL y HEX.
+
+- Reutilizar el código existente y mantener separadas las responsabilidades de HTML, CSS y JavaScript.
