@@ -74,3 +74,48 @@ visualmente. Preparada para integrar CSS y JavaScript.
 ### Decisión técnica
 Separar HTML, CSS y JavaScript para facilitar
 el mantenimiento y la evolución del proyecto.
+
+
+
+## Etapa 3 - CSS y diseño visual
+
+Fecha: 10/11/2026
+HENRY PI1 – ColorLab V2. Iniciamos la Etapa 3: CSS y diseño visual.
+
+Debemos desarrollar una interfaz moderna, organizada y atractiva, cumpliendo estrictamente la rúbrica oficial y aprovechando la experiencia de ColorLab V1.
+
+Mantendremos la distribución de tarjetas: 6 colores (3×2), 8 colores (4×2) y 9 colores (3×3), adaptando su tamaño a diferentes pantallas.
+
+Quiero trabajar de forma eficiente, escribir y comprender el código CSS, comprobar los resultados visuales y finalizar la etapa con la documentación de IA y un commit descriptivo.
+
+Debemos conservar las funcionalidades y la estructura HTML ya implementadas.
+
+### Aporte de IA
+Propuesta de estilos CSS organizados para
+encabezado, controles, tarjetas, resultados
+y adaptación a pantallas pequeñas.
+
+### Trabajo realizado
+- Escritura manual del código CSS.
+- Aplicación de estilos a la estructura HTML.
+- Preparación del diseño de tarjetas.
+- Configuración de reglas responsive.
+
+### Validación
+- CSS aplicado correctamente mediante Live Server.
+- Encabezado, paneles y controles visualizados.
+- Selectores y botón alineados en escritorio.
+- Diseño responsive comprobado al 100% de zoom.
+- Controles apilados verticalmente en ventana estrecha.
+- Distribución de tarjetas pendiente de validar
+  cuando se implemente JavaScript.
+
+### Resultado
+Interfaz visual implementada y validada en
+escritorio y ventana estrecha.
+Diseño preparado para las tarjetas dinámicas.
+
+### Decisión técnica
+Utilizar Flexbox para los controles y CSS Grid
+para las tarjetas, manteniendo las
+distribuciones acordadas.

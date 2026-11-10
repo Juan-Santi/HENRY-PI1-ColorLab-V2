@@ -1,0 +1,260 @@
+
+/* ====================================
+   ColorLab V2 - Estilos generales
+==================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f1f5fb;
+    color: #1e293b;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====================================
+   Encabezado
+==================================== */
+
+.encabezado {
+    background: linear-gradient(135deg, #152b54, #3456a5);
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.encabezado p {
+    margin: 10px 0 0;
+    color: #e2e8f0;
+}
+
+/* ====================================
+   Contenido principal
+==================================== */
+
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+.configuracion,
+.resultado {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(15, 23, 42, 0.08);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #17366d;
+    font-size: 1.4rem;
+}
+
+/* ====================================
+   Controles
+==================================== */
+
+.controles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 18px;
+}
+
+.grupo-control {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1 1 180px;
+}
+
+.grupo-control label {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.grupo-control select {
+    width: 100%;
+    min-height: 45px;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* ====================================
+   Botón principal
+==================================== */
+
+#btn-generar {
+    min-height: 45px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+
+#btn-generar:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+#btn-generar:active {
+    transform: translateY(0);
+}
+
+select:focus-visible,
+button:focus-visible {
+    outline: 3px solid #60a5fa;
+    outline-offset: 3px;
+}
+
+/* ====================================
+   Contenedor de paletas
+==================================== */
+
+.paleta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* 6 colores: 3 columnas x 2 filas */
+.paleta-grid[data-cantidad="6"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* 8 colores: 4 columnas x 2 filas */
+.paleta-grid[data-cantidad="8"] {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* 9 colores: 3 columnas x 3 filas */
+.paleta-grid[data-cantidad="9"] {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* ====================================
+   Tarjetas de colores
+==================================== */
+
+.tarjeta-color {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 160px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.muestra-color {
+    flex: 1;
+    min-height: 110px;
+}
+
+.codigo-color {
+    padding: 12px 6px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+    background: white;
+    color: #1e293b;
+}
+
+.mensaje-inicial {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 25px 10px;
+    color: #64748b;
+}
+
+/* ====================================
+   Pie de página
+==================================== */
+
+.pie-pagina {
+    text-align: center;
+    background: #152b54;
+    color: #e2e8f0;
+    padding: 18px;
+    font-size: 0.9rem;
+}
+
+/* ====================================
+   Adaptación a pantallas pequeñas
+==================================== */
+
+@media (max-width: 600px) {
+
+    .encabezado h1 {
+        font-size: 2rem;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    .configuracion,
+    .resultado {
+        padding: 16px;
+    }
+
+    .controles {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 14px;
+    }
+
+    .grupo-control {
+        flex: auto;
+    }
+
+    #btn-generar {
+        width: 100%;
+    }
+
+    .paleta-grid {
+        gap: 7px;
+    }
+
+    .tarjeta-color {
+        min-height: 110px;
+    }
+
+    .muestra-color {
+        min-height: 75px;
+    }
+
+    .codigo-color {
+        font-size: 0.65rem;
+        padding: 8px 3px;
+    }
+}
