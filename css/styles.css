@@ -258,3 +258,66 @@ button:focus-visible {
         padding: 8px 3px;
     }
 }
+
+
+/* ====================================
+   Etapa 7 - Funciones extras
+==================================== */
+
+.ayuda-tarjetas {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 18px;
+}
+
+.acciones-tarjeta {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px;
+    background: white;
+    border-top: 1px solid #e2e8f0;
+}
+
+.btn-accion {
+    flex: 1;
+    min-width: 0;
+    min-height: 36px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background: #f8fafc;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.2s;
+}
+
+.btn-accion:hover {
+    background: #dbeafe;
+}
+
+.tarjeta-color.bloqueada {
+    outline: 2px solid #2563eb;
+    outline-offset: -2px;
+}
+
+.btn-bloquear[aria-pressed="true"] {
+    background: #dbeafe;
+    border-color: #2563eb;
+}
+
+@media (max-width: 600px) {
+    .acciones-tarjeta {
+        gap: 3px;
+        padding: 5px 3px;
+    }
+
+    .btn-accion {
+        min-height: 32px;
+        padding: 3px;
+        font-size: 0.85rem;
+    }
+
+    .ayuda-tarjetas {
+        font-size: 0.75rem;
+    }
+}

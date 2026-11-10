@@ -82,39 +82,101 @@ function convertirHSL_a_HEX(colorHSL) {
    Generar paleta de colores
 ==================================== */
 
+
 function generarPaleta() {
     const cantidad = Number(selectorCantidad.value);
     const tonoInicial = numeroAleatorio(0, 359);
     const separacion = 360 / cantidad;
 
-    // Limpiar los resultados anteriores
+    // Recuperar colores bloqueados antes de limpiar
+    const coloresBloqueados = Array.from(
+        contenedorPaleta.querySelectorAll(".tarjeta-color"),
+        (tarjeta) => tarjeta.classList.contains("bloqueada")
+            ? tarjeta.dataset.hsl
+            : null
+    );
+
     contenedorPaleta.replaceChildren();
     contenedorPaleta.dataset.cantidad = String(cantidad);
 
-    // Crear una tarjeta por cada color
     for (let i = 0; i < cantidad; i++) {
         const ajuste = numeroAleatorio(-8, 8);
         const tono = (tonoInicial + i * separacion + ajuste + 360) % 360;
-        const color = crearColorHSL(tono);
+        const color = coloresBloqueados[i] ?? crearColorHSL(tono);
 
+        // Crear elementos de la tarjeta
         const tarjeta = document.createElement("div");
         const muestra = document.createElement("div");
         const codigo = document.createElement("span");
+        const acciones = document.createElement("div");
+        const botonCopiar = document.createElement("button");
+        const botonBloquear = document.createElement("button");
 
         tarjeta.className = "tarjeta-color";
         muestra.className = "muestra-color";
         codigo.className = "codigo-color";
+        acciones.className = "acciones-tarjeta";
+        botonCopiar.className = "btn-accion btn-copiar";
+        botonBloquear.className = "btn-accion btn-bloquear";
 
+        tarjeta.dataset.hsl = color;
         muestra.style.backgroundColor = color;
         codigo.textContent = color;
-        tarjeta.dataset.hsl = color;
 
-        tarjeta.append(muestra, codigo);
+        if (coloresBloqueados[i]) {
+            tarjeta.classList.add("bloqueada");
+        }
+
+        // Boton copiar
+        botonCopiar.type = "button";
+        botonCopiar.textContent = "📋";
+        botonCopiar.title = "Copiar código";
+        botonCopiar.setAttribute("aria-label", "Copiar código");
+
+        botonCopiar.addEventListener("click", async () => {
+            try {
+                await navigator.clipboard.writeText(codigo.textContent);
+
+                botonCopiar.textContent = "✓";
+                botonCopiar.title = "Código copiado";
+                botonCopiar.setAttribute("aria-label", "Código copiado");
+            } catch (error) {
+                botonCopiar.textContent = "!";
+                botonCopiar.title = "No se pudo copiar";
+                botonCopiar.setAttribute("aria-label", "No se pudo copiar");
+            }
+        });
+
+        // Boton bloquear / desbloquear
+        botonBloquear.type = "button";
+
+        const actualizarBotonBloqueo = () => {
+            const bloqueada = tarjeta.classList.contains("bloqueada");
+
+            botonBloquear.textContent = bloqueada ? "🔓" : "🔒";
+            botonBloquear.title = bloqueada
+                ? "Desbloquear color"
+                : "Bloquear color";
+
+            botonBloquear.setAttribute("aria-label", botonBloquear.title);
+            botonBloquear.setAttribute("aria-pressed", String(bloqueada));
+        };
+
+        botonBloquear.addEventListener("click", () => {
+            tarjeta.classList.toggle("bloqueada");
+            actualizarBotonBloqueo();
+        });
+
+        actualizarBotonBloqueo();
+
+        acciones.append(botonCopiar, botonBloquear);
+        tarjeta.append(muestra, codigo, acciones);
         contenedorPaleta.appendChild(tarjeta);
     }
 
     actualizarFormato();
 }
+
 
 /* ====================================
    Actualizar formato de colores
@@ -135,6 +197,13 @@ function actualizarFormato() {
 
         muestra.style.backgroundColor = colorMostrado;
         codigo.textContent = colorMostrado;
+
+        const botonCopiar = tarjeta.querySelector(".btn-copiar");
+
+        botonCopiar.textContent = "📋";
+        botonCopiar.title = "Copiar código";
+        botonCopiar.setAttribute("aria-label", "Copiar código");
+
     });
 }
 

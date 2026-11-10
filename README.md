@@ -19,6 +19,10 @@ El proyecto utiliza HTML5, CSS3 y JavaScript, con una interfaz adaptable a disti
 - Actualización automática al cambiar la cantidad de colores.
 - Generación de nuevas paletas mediante un botón.
 - Diseño responsive para escritorio y dispositivos móviles.
+- Copia de códigos HSL y HEX al portapapeles.
+- Confirmación visual después de copiar.
+- Bloqueo y desbloqueo individual de colores.
+- Conservación de colores bloqueados al regenerar.
 
 ### Tecnologías utilizadas
 
@@ -31,6 +35,18 @@ Abrir `index.html` en el navegador, preferiblemente mediante Live Server en Visu
 Seleccionar la cantidad de colores deseada y el formato HSL o HEX. Presionar **Generar paleta** para crear los colores.
 
 Al cambiar la cantidad seleccionada, las tarjetas se actualizan automáticamente. Al alternar entre HSL y HEX, se conserva la paleta y cambian únicamente los códigos mostrados.
+
+Para copiar un color, presionar el botón de copiar
+de su tarjeta.
+
+Para conservar un color durante la generación,
+presionar el botón de bloqueo.
+
+Los colores bloqueados permanecen en su posición
+al generar nuevas paletas.
+
+Para permitir que un color vuelva a cambiar,
+desbloquear su tarjeta.
 
 ### Estructura del proyecto
 

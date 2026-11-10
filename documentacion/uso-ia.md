@@ -296,3 +296,67 @@ las tarjetas y el botón permite generar nuevas paletas.
 ### Decisión técnica
 - Reutilizar la función generarPaleta() mediante
 el evento change, evitando duplicar código.
+
+
+
+## Etapa 7 - Funcionalidades extras
+Fecha: 10/11/2026
+
+### Prompt enviado a la IA
+HENRY PI1 – ColorLab V2. Iniciamos la Etapa 7: funcionalidades extras.
+
+Implementaremos la opción de copiar códigos HSL y HEX y la posibilidad de bloquear individualmente colores para conservarlos al generar nuevas paletas.
+
+Las mejoras deben integrarse con las funcionalidades existentes, manteniendo los formatos HSL/HEX, las cantidades 6/8/9 y sus distribuciones correspondientes.
+
+Quiero una interfaz clara, botones comprensibles y una implementación eficiente, reutilizando el código actual y evitando duplicaciones.
+
+Debemos comprobar que los colores bloqueados se conserven correctamente, que los códigos puedan copiarse y que los cambios de formato no alteren los colores.
+
+Seguiremos la rúbrica oficial de HENRY. Al finalizar realizaremos las pruebas en Live Server, documentaremos el prompt y la colaboración con IA, y registraremos un commit descriptivo.
+
+### Aporte de IA
+- Propuesta de botones individuales para copiar y bloquear colores.
+- Integración de la API Clipboard para copiar códigos HSL y HEX.
+- Incorporación de estados visuales para identificar colores bloqueados.
+- Modificación de la generación de paletas para conservar colores por posición.
+- Recomendaciones de estilos CSS y accesibilidad.
+- Orientación para las pruebas funcionales.
+
+### Trabajo realizado
+- Integración de las funciones de copiar y bloquear.
+- Incorporación de botones interactivos en las tarjetas.
+- Actualización de los estilos visuales.
+- Pruebas de copia mediante el Bloc de notas.
+- Verificación del bloqueo y desbloqueo de colores.
+- Comprobación de la alternancia HSL/HEX.
+
+### Validación
+- Copia de códigos HSL: correcta.
+- Copia de códigos HEX: correcta.
+- Confirmación visual mediante el símbolo ✓: correcta.
+- Bloqueo individual de colores: correcto.
+- Regeneración conservando los colores bloqueados: correcta.
+- Desbloqueo y posterior regeneración: correcto.
+- Alternancia HSL/HEX conservando los colores: correcta.
+- Distribución de nueve tarjetas 3×3: correcta.
+- Consola JavaScript sin errores visibles durante las pruebas.
+- Conservación de tres colores bloqueados al cambiar
+  de 6 a 8 y 9 tarjetas: correcta.
+- Regeneración de las tarjetas no bloqueadas: correcta.
+- Distribuciones 3x2, 4x2 y 3x3 conservadas.
+
+### Resultado
+- Se implementaron satisfactoriamente dos funcionalidades adicionales: copiar códigos y bloquear colores.
+- El usuario puede seleccionar colores que desea conservar, generar nuevas paletas y desbloquearlos cuando lo necesite.
+- La aplicación permite copiar códigos HSL y HEX directamente al portapapeles, mostrando una confirmación visual.
+- Los colores bloqueados también se conservan al cambiar la cantidad de tarjetas, siempre que sus posiciones continúen disponibles.
+
+### Decisión técnica
+- Utilizar la API Clipboard del navegador para copiar códigos y el atributo data-hsl para conservar el color original.
+
+- Identificar las tarjetas bloqueadas mediante una clase CSS y preservar sus colores por posición durante la regeneración.
+
+- Reutilizar la lógica de generación existente, manteniendo la compatibilidad con HSL y HEX.
+
+- Los bloqueos se conservan por posición; al reducir la cantidad de tarjetas, los bloqueos que queden fuera de la nueva cantidad no se mantienen.
