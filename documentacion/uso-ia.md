@@ -119,3 +119,66 @@ Diseño preparado para las tarjetas dinámicas.
 Utilizar Flexbox para los controles y CSS Grid
 para las tarjetas, manteniendo las
 distribuciones acordadas.
+
+
+
+## Etapa 4 - CSS y diseño visual
+
+### Prompt enviado a la IA
+Fecha: 10/11/2026
+HENRY PI1 – ColorLab V2. Iniciamos la Etapa 4: JavaScript y generación de colores HSL.
+
+Implementaremos la generación aleatoria de colores HSL, creando tarjetas dinámicas según el selector de 6, 8 o 9 colores, respetando las distribuciones 3×2, 4×2 y 3×3.
+
+Debemos evitar la repetición excesiva y conseguir una variedad cromática equilibrada, aprovechando lo aprendido en ColorLab V1.
+
+Quiero comprender la lógica JavaScript, escribir manualmente el código en VS Code, validar su funcionamiento en Live Server y registrar el prompt, los aportes de IA, las pruebas y las decisiones técnicas antes de realizar el commit.
+
+Conservaremos el HTML y CSS ya desarrollados y seguiremos estrictamente la rúbrica oficial.
+
+### Aporte de IA
+- Propuesta de funciones JavaScript para generar colores HSL aleatorios.
+- Distribución de tonos mediante separación angular en el círculo cromático.
+- Variación de saturación y luminosidad para mejorar la diversidad de colores.
+- Creación dinámica de tarjetas utilizando elementos HTML desde JavaScript.
+- Integración de eventos para activar el botón Generar paleta.
+- Orientación para identificar y corregir errores mediante la consola del navegador.
+
+
+### Trabajo realizado
+- Escritura manual del código JavaScript en VS Code.
+- Implementación de funciones para generar colores aleatorios HSL.
+- Creación de tarjetas dinámicas con sus respectivos códigos.
+- Integración del selector de cantidad con el botón generador.
+- Ejecución de pruebas en Live Server.
+- Revisión y corrección manual de errores identificados durante la depuración.
+
+### Validación
+- Generación de 6 colores: correcta, distribución 3×2.
+- Generación de 8 colores: correcta, distribución 4×2.
+- Generación de 9 colores: correcta, distribución 3×3.
+- Códigos HSL mostrados correctamente en las tarjetas.
+- Variedad cromática comprobada visualmente.
+- Funcionamiento de la generación de paletas confirmado.
+- Consola de JavaScript sin errores visibles en la comprobación final.
+- Selección del formato HEX pendiente de implementación en la etapa 5.
+
+### Depuración con IA
+
+Durante las pruebas se identificaron y corrigieron errores reales:
+- Error en el operador de la función numeroAleatorio().
+- Error de sintaxis detectado mediante la consola de Chrome.
+- Diferencia entre selectorcantidad y selectorCantidad por el uso de mayúsculas y minúsculas.
+
+Los errores fueron analizados con apoyo de ChatGPT. Las correcciones se escribieron manualmente en VS Code y se comprobaron nuevamente mediante Live Server.
+
+### Resultado
+- Generador dinámico de paletas HSL implementado y funcionando correctamente con 6, 8 y 9 colores.
+- Las tarjetas muestran los colores generados y sus respectivos códigos HSL, respetando las distribuciones establecidas.
+
+### Decisión técnica
+- Utilizar una única función para generar paletas de diferentes cantidades, evitando duplicar código.
+
+- Distribuir los tonos HSL alrededor del círculo cromático y aplicar pequeñas variaciones aleatorias de saturación y luminosidad para reducir la similitud entre colores.
+
+- Mantener separados HTML, CSS y JavaScript para facilitar las futuras ampliaciones del proyecto.
