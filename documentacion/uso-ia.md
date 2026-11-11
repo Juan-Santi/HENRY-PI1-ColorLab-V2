@@ -37,6 +37,17 @@ V2 mediante 9 etapas documentadas.
 
 
 
+### Evidencias de planificación e implementación
+
+**Planificación del proyecto con apoyo de IA**
+
+![Planificación de ColorLab V2](evidencias/01-planificacion-ia.png)
+
+**Inicialización de Git y revisión de la rúbrica**
+
+![Inicialización de Git y rúbrica HENRY](evidencias/01-inicializacion-git.png)
+
+
 ## Etapa 2 - Estructura HTML semántica
 
 Fecha: 10/11/2026
@@ -121,8 +132,19 @@ para las tarjetas, manteniendo las
 distribuciones acordadas.
 
 
+### Evidencias de desarrollo y validación
 
-## Etapa 4 - CSS y diseño visual
+**Resultado visual de la etapa 3**
+
+![Diseño CSS de ColorLab V2](evidencias/03-diseno-css.png)
+
+**Desarrollo, documentación y colaboración con IA**
+
+![Validación de la etapa 3](evidencias/03-desarrollo-validacion-ia.png)
+
+
+
+## Etapa 4 - JavaScript y generación de colores HSL
 
 ### Prompt enviado a la IA
 Fecha: 10/11/2026
@@ -182,6 +204,17 @@ Los errores fueron analizados con apoyo de ChatGPT. Las correcciones se escribie
 - Distribuir los tonos HSL alrededor del círculo cromático y aplicar pequeñas variaciones aleatorias de saturación y luminosidad para reducir la similitud entre colores.
 
 - Mantener separados HTML, CSS y JavaScript para facilitar las futuras ampliaciones del proyecto.
+
+
+### Evidencias de implementación y validación
+
+**Resultado: generación dinámica de colores HSL**
+
+![Resultado de paleta HSL](evidencias/04-resultado-paleta-hsl.png)
+
+**Proceso de desarrollo, detección de errores y apoyo de IA**
+
+![Revisión de errores JavaScript con IA](evidencias/04-proceso-revision-errores-solucion.png)
 
 
 
@@ -247,6 +280,12 @@ Seguiremos estrictamente la rúbrica oficial de HENRY.
 
 - Reutilizar el código existente y mantener separadas las responsabilidades de HTML, CSS y JavaScript.
 
+
+### Evidencia de implementación y validación
+
+**Generación de paletas en formato HEX**
+
+![Resultado HEX validado en Live Server](evidencias/05-resultado-paleta-hex.png)
 
 
 
@@ -360,3 +399,66 @@ Seguiremos la rúbrica oficial de HENRY. Al finalizar realizaremos las pruebas e
 - Reutilizar la lógica de generación existente, manteniendo la compatibilidad con HSL y HEX.
 
 - Los bloqueos se conservan por posición; al reducir la cantidad de tarjetas, los bloqueos que queden fuera de la nueva cantidad no se mantienen.
+
+### Evidencia de implementación y validación
+
+**Copia y verificación de códigos HSL**
+
+![Copia de código HSL validada](evidencias/07-copia-codigos-hsl.png)
+
+**Bloqueo de colores al regenerar la paleta**
+
+![Bloqueo de colores validado](evidencias/07-bloqueo-colores.png)
+
+**Conservación de bloqueos al cambiar la cantidad de colores**
+
+![Bloqueos conservados entre 6, 8 y 9 colores](evidencias/07-cambio-cantidad-bloqueos.png)
+
+
+
+
+## Etapa 8 - Documentación final y auditoría
+Fecha: 10/11/2026
+
+### Objetivo
+
+Revisar la documentación del proyecto y consolidar
+las evidencias de funcionamiento y colaboración con IA.
+
+### Aporte de IA
+
+- Orientación para organizar las evidencias por etapa.
+- Recomendaciones para documentar las pruebas reales.
+- Revisión de la estructura del README.
+- Apoyo para identificar documentación pendiente.
+
+### Trabajo realizado
+
+- Actualización del README.
+- Organización de la carpeta documentacion/evidencias.
+- Incorporación de capturas originales del proyecto.
+- Vinculación de imágenes en uso-ia.md.
+- Revisión de funcionalidades ya implementadas.
+
+### Validaciones
+
+- Generación de paletas de 6, 8 y 9 colores.
+- Funcionamiento de formatos HSL y HEX.
+- Conservación de colores al cambiar de formato.
+- Copia de códigos comprobada.
+- Bloqueo individual de colores comprobado.
+- Conservación de bloqueos al cambiar la cantidad.
+- Diseño responsive probado en pantalla de 320 px.
+- Visualización correcta de las evidencias Markdown.
+
+### Decisión técnica
+
+Mantener el código funcional existente y concentrar
+esta etapa en documentación, evidencias y preparación
+para la publicación en GitHub.
+
+### Resultado
+
+Documentación y evidencias funcionales consolidadas.
+Publicación en GitHub y GitHub Pages pendiente
+para la etapa 9.
