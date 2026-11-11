@@ -109,15 +109,17 @@ Etapas 1 a 7 completadas, documentadas y registradas en Git.
 Etapa 8: documentación, evidencias y auditoría
 final completadas.
 
-Etapa 9: pendiente de publicación en GitHub y GitHub Pages.
+Etapa 9: repositorio publicado en GitHub y aplicación desplegada mediante GitHub Pages.
 
 
 ### Despliegue
 
-Pendiente de publicación en GitHub Pages.
+**Aplicación publicada:**
+[ColorLab V2 - GitHub Pages](https://juan-santi.github.io/HENRY-PI1-ColorLab-V2/)
 
-Una vez realizado el despliegue, se incorporarán
-los enlaces del repositorio y de la aplicación publicada.
+**Repositorio de GitHub:**
+[HENRY-PI1-ColorLab-V2](https://github.com/Juan-Santi/HENRY-PI1-ColorLab-V2)
+
 
 
 ### Mejoras futuras

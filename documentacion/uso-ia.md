@@ -462,3 +462,37 @@ para la publicación en GitHub.
 Documentación y evidencias funcionales consolidadas.
 Publicación en GitHub y GitHub Pages pendiente
 para la etapa 9.
+
+
+
+## Etapa 9 - Publicación en GitHub y GitHub Pages
+
+### Colaboración con IA
+
+Se consultó a ChatGPT para recibir orientación sobre
+la creación del repositorio remoto, la conexión con Git,
+la autenticación de GitHub y la configuración de GitHub Pages.
+
+### Implementación
+
+- Se creó un repositorio público en GitHub.
+- Se vinculó el repositorio local con `origin`.
+- Se publicó la rama `main` mediante Git.
+- Se configuró GitHub Pages desde `main` y `/(root)`.
+- Se incorporaron los enlaces públicos al README.
+
+### Validaciones
+
+- Git confirmó la publicación de `main` en `origin/main`.
+- Se comprobó que los archivos y commits aparecen en GitHub.
+- GitHub Pages confirmó que el sitio está publicado.
+- Se abrió ColorLab V2 desde su URL pública.
+- Se confirmó el funcionamiento de la generación de paletas.
+
+### Resultado
+
+Repositorio:
+https://github.com/Juan-Santi/HENRY-PI1-ColorLab-V2
+
+Aplicación:
+https://juan-santi.github.io/HENRY-PI1-ColorLab-V2/
