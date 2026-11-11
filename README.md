@@ -79,8 +79,6 @@ y se conservan por posición al generar nuevas paletas.
 - La interfaz utiliza Flexbox para los controles, CSS Grid para las tarjetas y Media Queries para adaptarse a diferentes tamaños de pantalla.
 
 
-### Uso de inteligencia artificial
-
 
 ### Uso de inteligencia artificial
 
